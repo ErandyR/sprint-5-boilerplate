@@ -1,6 +1,6 @@
 //url del api que voy a usar
 var api = {
-    url: 'http://examen-laboratoria-sprint-5.herokuapp.com/topics'
+    url: 'https://examen-laboratoria-sprint-5.herokuapp.com/topics'
 };
 
 //funcion para cargar pagina
