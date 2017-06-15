@@ -3,13 +3,14 @@ var api = {
 };
 
 var cargarPagina = function () {
+    
     $(document).on("click", ".respuestas", mostrarRespuestas);
+    $("#add-form").submit(agregarRespuesta);
 };
 
-var mostrarRespuestas = function (e) {
-    e.preventDefault();
-    $(".contenedorRespuestas").css("display", "block");
-}
+var plantillaTemaBuscado =
+    '<p class="contenido">__contenido__</p>' +
+    '<p class="autorParrafo">autor</p>';
 
 var topicId = getParameterByName('topic_id');
 
@@ -17,5 +18,26 @@ var topicId = getParameterByName('topic_id');
 if(topicId){
   alert("El topic ID es:"+topicId);
 }
+
+var plantillaAgregarRespuesta = 
+                '<p>Por: __autor__</p>' +
+                '<p class="espacioEntreRespuestas">Respuesta: __contenidoRespuesta__</p>';
+
+var $contenedorAutorRespuesta = $(".contenedorAutorRespuesta");
+
+var mostrarRespuestas = function (e) {
+    e.preventDefault();
+    $(".contenedorRespuestas").css("display", "block");
+    
+}
+
+var agregarRespuesta = function () {
+    var contenidoRespuesta = $("#contenido-respuesta").val();
+    var autor = $("#autor-respuesta").val();
+    $contenedorAutorRespuesta.append(
+    plantillaAgregarRespuesta.replace("__autor__", autor)
+    .replace("__contenidoRespuesta__", contenidoRespuesta)
+    );
+};
 
 $(document).ready(cargarPagina);

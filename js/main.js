@@ -16,10 +16,10 @@ var $listaDeTemas = $("#tasks-list");
 //plantilla de nuevo tema o tema a mostrar
 var plantillaTemas =
     '<tr>' +
-    '<td><a href="#">__contenido__</a></td>' +
+    '<td><a href="verTopic.html">__contenido__</a></td>' +
     '<td>__autor__</td>' +
     '<td>' +
-    '<a href="#">respuestas: __numeroDeRespuestas__</a>' +
+    '<a href="verTopic.html">respuestas: __numeroDeRespuestas__</a>' +
     '</td>' +
     '</tr>';
 

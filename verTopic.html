@@ -17,8 +17,10 @@
     <div class="jumbotron">
         <div class="container">
             <h4>Titulo Tema</h4>
+<!--
             <p class="contenido">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, modi totam soluta minus accusamus, maiores ex amet tempora unde harum dicta dolorem enim, nisi et. Porro deleniti ullam reprehenderit, reiciendis!</p>
             <p class="autorParrafo">autor</p>
+-->
             <p><a class="btn btn-primary btn-lg respuestas" href="#" role="button">Ir a las respuestas</a></p>
         </div>
         
@@ -28,10 +30,12 @@
     <div class="jumbotron contenedorRespuestas">
        <div class="container">
            <h2>Respuestas</h2>
-            <div>
-                <p><a class="btn btn-primary btn-lg botonCrearRespuesta" href="#" role="button" data-toggle="modal" data-target="#nuevaRespuesta">Crear Respuesta</a></p>
+            <p><a class="btn btn-primary btn-lg botonCrearRespuesta" href="#" role="button" data-toggle="modal" data-target="#nuevaRespuesta">Crear Respuesta</a></p>
+            <div class="contenedorAutorRespuesta">
+<!--
                 <p>autor</p>
-                <p>contenido respuesta</p>
+                <p class="espacioEntreRespuestas">contenido respuesta</p>
+-->
             </div>
        </div>
     </div>
@@ -47,10 +51,10 @@
                         </div>
                         <div class="modal-body">
                             <div class="form-group">
-                                <label for="contenido-tema">Contenido:</label>
-                                <input type="text" class="form-control" id="contenido-tema" placeholder="contenido">
-                                <label for="autor-tema">Autor:</label>
-                                <input type="text" class="form-control" id="autor-tema" placeholder="autor">
+                                <label for="contenido-respuesta">Respuesta:</label>
+                                <input type="text" class="form-control" id="contenido-respuesta" placeholder="respuesta">
+                                <label for="autor-respuesta">Por:</label>
+                                <input type="text" class="form-control" id="autor-respuesta" placeholder="autor">
                             </div>
                         </div>
                         <div class="modal-footer">

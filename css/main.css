@@ -9,3 +9,7 @@
 .contenedorRespuestas {
     display: none;
 }
+
+.espacioEntreRespuestas {
+    margin-bottom: 15%;
+}
