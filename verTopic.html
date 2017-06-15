@@ -2,24 +2,71 @@
 
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
+    <title>Mi Foro</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
 
-    <h1>Aqui va el contenido de tema individual</h1>
-    <!-- Borar cuando se entienda como pasar info con topic id-->
-    <h1>Ingresa el topic id a este html usando la url.</h1>
-    <a href='verTopic.html?topic_id=2'>Algo asi</a><br/>
-    <a href='verTopic.html?topic_id=1'>O asi</a>
-    <!-- Borar cuando se entienda como pasar info con topic id-->
+<body>
+
+    <h1>Mi Foro</h1>
+<!--    contenedor de tema-->
+    <div class="jumbotron">
+        <div class="container">
+            <h4>Titulo Tema</h4>
+            <p class="contenido">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, modi totam soluta minus accusamus, maiores ex amet tempora unde harum dicta dolorem enim, nisi et. Porro deleniti ullam reprehenderit, reiciendis!</p>
+            <p class="autorParrafo">autor</p>
+            <p><a class="btn btn-primary btn-lg respuestas" href="#" role="button">Ir a las respuestas</a></p>
+        </div>
+        
+    </div>
+
+<!--   contenedor de respuestas-->
+    <div class="jumbotron contenedorRespuestas">
+       <div class="container">
+           <h2>Respuestas</h2>
+            <div>
+                <p><a class="btn btn-primary btn-lg botonCrearRespuesta" href="#" role="button" data-toggle="modal" data-target="#nuevaRespuesta">Crear Respuesta</a></p>
+                <p>autor</p>
+                <p>contenido respuesta</p>
+            </div>
+       </div>
+    </div>
     
-     <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+<!--    modal para crear nueva respuesta-->
+   <div class="modal fade" id="nuevaRespuesta" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <form id="add-form">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">Nuevo Respuesta:</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label for="contenido-tema">Contenido:</label>
+                                <input type="text" class="form-control" id="contenido-tema" placeholder="contenido">
+                                <label for="autor-tema">Autor:</label>
+                                <input type="text" class="form-control" id="autor-tema" placeholder="autor">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                            <button type="submit" class="btn btn-primary">Crear Respuesta</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
 
-
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="js/functions.js"></script>
     <script src="js/verTopic.js"></script>
-  </body>
+</body>
+
 </html>
